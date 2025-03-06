@@ -1,5 +1,5 @@
 import Arrow from "@/assets/arrow";
-import revolutionizing from "../../assets/revolutionizing.png";
+import revolutionizing from "../../../assets/revolutionizing.png";
 import {
   Card,
   CardContent,

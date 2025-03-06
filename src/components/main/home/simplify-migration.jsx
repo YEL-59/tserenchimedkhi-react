@@ -1,6 +1,6 @@
 import Folder from "@/assets/folder";
-import { Button } from "../ui/button";
-import line1 from "../../assets/Line (1).png";
+import { Button } from "../../ui/button";
+import line1 from "../../../assets/Line (1).png";
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import migration from "../../assets/migration.png";
+import migration from "../../../assets/migration.png";
 
 const SimplifyMigration = () => {
   return (

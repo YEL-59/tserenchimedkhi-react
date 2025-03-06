@@ -1,5 +1,5 @@
 import Folder from "@/assets/folder";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   Card,
   CardContent,

@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   const navitems = [
-    { title: "About us", url: "/" },
+    { title: "About us", url: "about" },
     { title: "Contact us", url: "/#" },
     { title: "Help", url: "#" },
     { title: "Privacy Policy", url: "#" },

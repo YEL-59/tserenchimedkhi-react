@@ -1,6 +1,6 @@
 import Graph from "@/assets/graph1";
-import line from "../../assets/Line.png";
-import bannerbg from "../../assets/banner.png";
+import line from "../../../assets/Line.png";
+import bannerbg from "../../../assets/banner.png";
 import {
   Card,
   CardContent,
@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Graph2 from "@/assets/graph2";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Task from "@/assets/task";
 import Logo1 from "@/assets/logo1";
 import Task1 from "@/assets/task1";
