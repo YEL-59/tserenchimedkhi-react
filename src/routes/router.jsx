@@ -1,4 +1,5 @@
 import Mainlayout from "@/layouts/main-layout";
+import Home from "@/pages/main/home/home";
 import React from "react";
 import { createBrowserRouter } from "react-router";
 
@@ -7,7 +8,12 @@ export const router = createBrowserRouter([
     path: "/",
     exact: true,
     element: <Mainlayout />,
-    children: [{ path: "/", element: <h1>Home Page</h1> }],
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
   },
   {
     path: "/about",
