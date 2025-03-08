@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "../../ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
 
 const PriceBanner = () => {
   const plans = [
