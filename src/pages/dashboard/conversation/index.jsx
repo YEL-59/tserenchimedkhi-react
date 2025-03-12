@@ -1,10 +1,17 @@
+import AttachmentModal from "@/components/dashboard/AttachmentModal";
 import { Smile, Copy, Bookmark } from "lucide-react";
 import { Mic, ArrowRight, Paperclip } from "lucide-react";
+import { useState } from "react";
 export default function Conversation() {
   // const params = useParams();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className="flex flex-col min-h-screen flex-grow">
+        <AttachmentModal
+          open={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
         <div>
           <div className="flex gap-2 pb-2 max-w-7xl mx-auto py-10">
             <div className="h-10 w-10 rounded bg-black "></div>
@@ -58,7 +65,10 @@ export default function Conversation() {
 
         <div className="w-full max-w-7xl flex items-center border border-gray-300 bg-[#1E1F22] rounded-full p-2 shadow-md mb-5 mx-auto">
           <div className="bg-[#424346] h-10 w-10 rounded-full flex justify-center items-center">
-            <Paperclip className="text-white w-6 h-6 cursor-pointer" />
+            <Paperclip
+              className="text-white w-6 h-6 cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            />
           </div>
 
           <input
