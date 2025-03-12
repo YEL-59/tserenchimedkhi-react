@@ -10,6 +10,9 @@ export default function DashboardLayout() {
         <DashboardSidebar />
       </aside>
       <div className="flex-1 ">
+        <div>
+          <h1>Navbar!</h1>
+        </div>
         <Outlet />
       </div>
     </div>

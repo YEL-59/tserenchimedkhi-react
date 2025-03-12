@@ -7,6 +7,11 @@ import Chat from "@/pages/dashboard/chat";
 import Conversation from "@/pages/dashboard/conversation";
 import Chatscreen1 from "@/pages/dashboard/conversation/chatscreen1";
 import Chatscreen2 from "@/pages/dashboard/conversation/chatscreen2";
+import Chatscreen3 from "@/pages/dashboard/conversation/chatscreen3";
+import Chatscreen4 from "@/pages/dashboard/conversation/chatscreen4";
+import ChangePassword from "@/pages/dashboard/settings/change-password";
+import GeneralSettings from "@/pages/dashboard/settings/general-settings";
+import SettingsLayout from "@/pages/dashboard/settings/settings-layout";
 import About from "@/pages/main/about/about";
 import Home from "@/pages/main/home/home";
 import Pricing from "@/pages/main/pricing/pricing";
@@ -56,6 +61,28 @@ export const router = createBrowserRouter([
           {
             path: "screen2",
             element: <Chatscreen2 />,
+          },
+          {
+            path: "screen3",
+            element: <Chatscreen3 />,
+          },
+          {
+            path: "screen4",
+            element: <Chatscreen4 />,
+          },
+        ],
+      },
+      {
+        path: "settings",
+        element: <SettingsLayout />,
+        children: [
+          {
+            index: true,
+            element: <GeneralSettings />,
+          },
+          {
+            path: "change-password",
+            element: <ChangePassword />,
           },
         ],
       },
