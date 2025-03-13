@@ -1,130 +1,125 @@
-import {
-  Sidebar as ShadCNSidebar,
-  SidebarContent,
-  SidebarHeader,
-} from "@/components/ui/sidebar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "react-router";
-import { uid } from "uid";
-import { Plus } from "lucide-react";
-import { Ellipsis } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Icon3 from "@/assets/Icon3";
-import { MessageCircle } from "lucide-react";
-import logo from "../../../assets/image 29.png";
+import Icon3 from '@/assets/Icon3';
+import { Input } from '@/components/ui/input';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import useAvailableHeight from '@/hooks/useAvailableHeight';
+import { Ellipsis, MessageCircle, Plus } from 'lucide-react';
+import { Link } from 'react-router';
+import { uid } from 'uid';
+import logo from '../../../assets/image 29.png';
 
 export default function Sidebar() {
   const chats = [
     {
       id: uid(),
-      title: "Hello There",
-      message: "This is a message",
+      title: 'Hello There',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "See you",
-      message: "This is a message",
+      title: 'See you',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "See you",
-      message: "This is a message",
+      title: 'See you',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello There",
-      message: "This is a message",
+      title: 'Hello There',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "See you",
-      message: "This is a message",
+      title: 'See you',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "See you",
-      message: "This is a message",
+      title: 'See you',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello There",
-      message: "This is a message",
+      title: 'Hello There',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Nice Job",
-      message: "This is a message",
+      title: 'Nice Job',
+      message: 'This is a message',
     },
   ];
 
   const saved = [
     {
       id: uid(),
-      title: "Hello There",
-      message: "This is a message",
+      title: 'Hello There',
+      message: 'This is a message',
     },
     {
       id: uid(),
-      title: "Hello",
-      message: "This is a message",
+      title: 'Hello',
+      message: 'This is a message',
     },
   ];
 
+  const chatHeight = useAvailableHeight(['header', 'search']);
+
   return (
-    <ShadCNSidebar className="ml-[64px] w-[336px] p-2 bg-[#282A2E]">
+    <div className="w-[336px] h-screen p-2 bg-[#282A2E]">
       <Tabs defaultValue="chats" className="w-full bg-[#282A2E]">
-        <SidebarHeader>
+        <div className="header">
           {/* Top */}
           <div className="flex justify-between">
             <h2 className="text-white">My Chats</h2>
@@ -143,7 +138,7 @@ export default function Sidebar() {
               value="chats"
               className="bg-transparent data-[state=active]:bg-[#1E1F22] text-background data-[state=active]:text-[#FF8B41]"
             >
-              <MessageCircle className="size-5" /> Chats{" "}
+              <MessageCircle className="size-5" /> Chats{' '}
               <span className="h-4 w-4 px-3 rounded ml-2 flex justify-center items-center ">
                 24
               </span>
@@ -152,24 +147,20 @@ export default function Sidebar() {
               value="saved"
               className="bg-transparent data-[state=active]:bg-[#1E1F22]  text-background data-[state=active]:text-[#FF8B41]"
             >
-              <MessageCircle className="size-5" /> Saved{" "}
+              <MessageCircle className="size-5" /> Saved{' '}
               <span className="h-4 w-4 px-3 rounded ml-2 flex justify-center items-center ">
                 12
               </span>
             </TabsTrigger>
           </TabsList>
-        </SidebarHeader>
+        </div>
 
-        <div className="flex w-full max-w-sm items-center space-x-2 mt-5">
+        <div className="flex w-full max-w-sm items-center space-x-2 mt-5 search">
           <Input type="email" placeholder="Email" />
-
           <Icon3 />
         </div>
-        <SidebarContent>
-          <TabsContent
-            value="chats"
-            className="space-y-2 overflow-y-auto h-screen"
-          >
+        <div className="overflow-y-auto" style={{ height: `${chatHeight}px` }}>
+          <TabsContent value="chats" className="space-y-2">
             {chats.map((chat) => (
               <Link
                 to={`/dashboard/chat/${chat.id}`}
@@ -179,7 +170,7 @@ export default function Sidebar() {
                 <div className="hover:bg-[#1E1F22] p-2 rounded">
                   <div className="flex justify-between">
                     <div className="flex justify-center items-center gap-2">
-                      {" "}
+                      {' '}
                       <img src={logo} alt="" className="h-3 w-3" />
                       <h3
                         className="text-[#EEE]  text-[14px] not-italic font-semibold leading-normal
@@ -205,10 +196,7 @@ export default function Sidebar() {
               </Link>
             ))}
           </TabsContent>
-          <TabsContent
-            value="saved"
-            className="space-y-2 overflow-y-auto h-screen"
-          >
+          <TabsContent value="saved" className="space-y-2">
             {saved.map((chat) => (
               <Link
                 to={`/dashboard/chat/${chat.id}`}
@@ -218,7 +206,7 @@ export default function Sidebar() {
                 <div className="hover:bg-[#1E1F22] p-2 rounded">
                   <div className="flex justify-between">
                     <div className="flex justify-center items-center gap-2">
-                      {" "}
+                      {' '}
                       <img src={logo} alt="" className="h-3 w-3" />
                       <h3
                         className="text-[#EEE]  text-[14px] not-italic font-semibold leading-normal
@@ -244,8 +232,8 @@ export default function Sidebar() {
               </Link>
             ))}
           </TabsContent>
-        </SidebarContent>
+        </div>
       </Tabs>
-    </ShadCNSidebar>
+    </div>
   );
 }
