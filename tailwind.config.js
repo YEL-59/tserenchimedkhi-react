@@ -9,15 +9,7 @@ export default {
     container: {
       center: true,
       padding: {
-<<<<<<< HEAD
-        DEFAULT: "1rem",
-        // sm: '2rem',
-        // lg: '4rem',
-        // xl: '5rem',
-        // '2xl': '6rem',
-=======
         DEFAULT: '1rem',
->>>>>>> 5da5aee1abe6fe2c8ca56daf32dda0ea6f6f2c2a
       },
     },
     extend: {
