@@ -3,12 +3,12 @@ import DashboardLayout from '@/layouts/dashboard-layout';
 import MainLayout from '@/layouts/main-layout';
 import Signin from '@/pages/auth/signin';
 import Signup from '@/pages/auth/signup';
-import Chat from '@/pages/dashboard/chat';
-import Conversation from '@/pages/dashboard/conversation';
-import Chatscreen1 from '@/pages/dashboard/conversation/chatscreen1';
-import Chatscreen2 from '@/pages/dashboard/conversation/chatscreen2';
-import Chatscreen3 from '@/pages/dashboard/conversation/chatscreen3';
-import Chatscreen4 from '@/pages/dashboard/conversation/chatscreen4';
+import Chat from '@/pages/dashboard/chat/chat';
+import ChatScreen1 from '@/pages/dashboard/conversation/chatscreen1';
+import ChatScreen2 from '@/pages/dashboard/conversation/chatscreen2';
+import Chatscreen5 from '@/pages/dashboard/conversation/chatscreen5';
+import CompareUniversities from '@/pages/dashboard/conversation/compare-universities';
+import UniversityDetails from '@/pages/dashboard/conversation/university-details';
 import ChangePassword from '@/pages/dashboard/settings/change-password';
 import GeneralSettings from '@/pages/dashboard/settings/general-settings';
 import SettingsLayout from '@/pages/dashboard/settings/settings-layout';
@@ -51,24 +51,24 @@ export const router = createBrowserRouter([
             element: <Chat />,
           },
           {
-            path: '1',
-            element: <Conversation />,
+            path: 'chat-1',
+            element: <ChatScreen1 />,
           },
           {
-            path: '2',
-            element: <Chatscreen1 />,
+            path: 'chat-2',
+            element: <ChatScreen2 />,
           },
           {
-            path: '3',
-            element: <Chatscreen2 />,
+            path: 'university-details',
+            element: <UniversityDetails />,
           },
           {
-            path: 'screen3',
-            element: <Chatscreen3 />,
+            path: 'compare-universities',
+            element: <CompareUniversities />,
           },
           {
-            path: 'screen4',
-            element: <Chatscreen4 />,
+            path: 'connect-expert',
+            element: <Chatscreen5 />,
           },
         ],
       },

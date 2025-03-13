@@ -10,94 +10,16 @@ import logo from '../../../assets/image 29.png';
 export default function Sidebar() {
   const chats = [
     {
-      id: uid(),
-      title: 'Hello There',
-      message: 'This is a message',
+      id: 'chat-1',
+      title: 'Cosmic Evolution',
+      message:
+        'Some 15 billion years ago the universe emerged from a hot, dense sea of...',
     },
     {
-      id: uid(),
-      title: 'Hello',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'See you',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'See you',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello There',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'See you',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'See you',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello There',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Hello',
-      message: 'This is a message',
-    },
-    {
-      id: uid(),
-      title: 'Nice Job',
-      message: 'This is a message',
+      id: 'chat-2',
+      title: 'Warning Messages Samples',
+      message:
+        'Sure! Here are three different versions of 404 error messages for an ecommerce ...',
     },
   ];
 

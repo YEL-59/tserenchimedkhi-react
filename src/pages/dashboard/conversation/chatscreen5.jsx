@@ -1,29 +1,29 @@
-import AttachmentModal from "@/components/dashboard/attachment-modal";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Bookmark,
-  Copy,
-  Mic,
-  Paperclip,
-  Smile,
-  Clock4,
-  Phone,
-} from "lucide-react";
-import { useState } from "react";
-import { Calendar } from "@/components/ui/calendar";
+import AttachmentModal from '@/components/dashboard/attachment-modal';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from '@/components/ui/dialog';
+import {
+  ArrowRight,
+  Bookmark,
+  Clock4,
+  Copy,
+  Mic,
+  Paperclip,
+  Phone,
+  Smile,
+} from 'lucide-react';
+import { useState } from 'react';
 export default function Chatscreen5() {
   // const params = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTimeZone, setSelectedTimeZone] = useState("");
+  const [selectedTimeZone, setSelectedTimeZone] = useState('');
 
   return (
     <>
@@ -150,7 +150,7 @@ export default function Chatscreen5() {
 
               {selectedDate && (
                 <p className="text-gray-700">
-                  Selected Date: {format(selectedDate, "PPP")}
+                  {/* Selected Date: {format(selectedDate, 'PPP')} */}
                 </p>
               )}
 

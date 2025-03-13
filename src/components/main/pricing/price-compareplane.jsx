@@ -1,4 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,72 +7,70 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Righticon from "@/assets/righticon"; // Ensure you have this icon
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const plans = {
   monthly: [
     {
-      title: "Free",
-      description: "per user/month",
-      price: "$0",
-      ulhead: "For Small Teams",
-      "badge-percentage": "-15%",
+      title: 'Free',
+      description: 'per user/month',
+      price: '$0',
+      ulhead: 'For Small Teams',
+      'badge-percentage': '-15%',
       badge: false,
       features: [
-        "Real-time contact syncing",
-        "Automatic data enrichment",
-        "Up to 3 seats",
+        'Real-time contact syncing',
+        'Automatic data enrichment',
+        'Up to 3 seats',
       ],
     },
     {
-      title: "Basic",
-      description: "per user/month",
-      price: "$49",
-      "badge-percentage": "15%",
-      ulhead: "For Growing Teams",
+      title: 'Basic',
+      description: 'per user/month',
+      price: '$49',
+      'badge-percentage': '15%',
+      ulhead: 'For Growing Teams',
       badge: true,
-      features: ["Private lists", "Enhanced email sending", "No seat limits"],
+      features: ['Private lists', 'Enhanced email sending', 'No seat limits'],
     },
     {
-      title: "Pro",
-      description: "per user/month",
-      ulhead: "For Scaling Businesses",
-      price: "$79",
-      "badge-percentage": "25%",
+      title: 'Pro',
+      description: 'per user/month',
+      ulhead: 'For Scaling Businesses',
+      price: '$79',
+      'badge-percentage': '25%',
       badge: true,
       features: [
-        "Advanced data enrichment",
-        "Priority support",
-        "Unlimited seats",
+        'Advanced data enrichment',
+        'Priority support',
+        'Unlimited seats',
       ],
     },
   ],
   yearly: [
     {
-      title: "Free",
-      description: "per user/year",
-      price: "$0",
-      ulhead: "For Small Teams",
-      "badge-percentage": "-15%",
+      title: 'Free',
+      description: 'per user/year',
+      price: '$0',
+      ulhead: 'For Small Teams',
+      'badge-percentage': '-15%',
       badge: false,
     },
     {
-      title: "Basic",
-      description: "per user/year",
-      price: "$39",
-      "badge-percentage": "20%",
-      ulhead: "For Growing Teams",
+      title: 'Basic',
+      description: 'per user/year',
+      price: '$39',
+      'badge-percentage': '20%',
+      ulhead: 'For Growing Teams',
       badge: true,
     },
     {
-      title: "Pro",
-      description: "per user/year",
-      ulhead: "For Scaling Businesses",
-      price: "$59",
-      "badge-percentage": "30%",
+      title: 'Pro',
+      description: 'per user/year',
+      ulhead: 'For Scaling Businesses',
+      price: '$59',
+      'badge-percentage': '30%',
       badge: true,
     },
   ],
@@ -85,7 +84,7 @@ const Compareplane = () => {
       </h1>
 
       <Tabs defaultValue="monthly">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
           <div>
             <h1 className="text-black font-montserrat text-lg md:text-[18px] font-normal leading-[150%] pb-3">
               Billing Frequency
@@ -137,7 +136,7 @@ const PlanCard = ({ plan }) => {
         </p>
         {plan.badge && (
           <Badge className="ml-3 bg-red-500 text-white">
-            {plan["badge-percentage"]}
+            {plan['badge-percentage']}
           </Badge>
         )}
       </CardContent>

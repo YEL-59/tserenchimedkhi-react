@@ -3,6 +3,7 @@ import Icon6 from '@/assets/icon6';
 import Icon7 from '@/assets/icon7';
 import Icon8 from '@/assets/icon8';
 import AttachmentModal from '@/components/dashboard/attachment-modal';
+import ConnectExpertModal from '@/components/dashboard/connect-expert-modal';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -14,9 +15,12 @@ import {
 } from '@/components/ui/card';
 import { ArrowRight, Mic, Paperclip } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
-export default function Chatscreen2() {
+export default function ChatScreen2() {
   // const params = useParams();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardData = [
     {
@@ -98,8 +102,19 @@ export default function Chatscreen2() {
                 <div className="border max-w-[80%] mx-auto mb-5"></div>
                 <CardFooter>
                   <div className="flex flex-col gap-2 w-full">
-                    <Button>View More</Button>
-                    <Button className="border bg-transparent text-[#FF5241] hover:text-white">
+                    <Button
+                      onClick={() => {
+                        navigate('/dashboard/chat/university-details');
+                      }}
+                    >
+                      View More
+                    </Button>
+                    <Button
+                      className="border bg-transparent text-[#FF5241] hover:text-white"
+                      onClick={() => {
+                        navigate('/dashboard/chat/compare-universities');
+                      }}
+                    >
                       Compare plans
                     </Button>
                     <Button className="border bg-transparent text-[#FF5241] hover:text-white">
@@ -171,7 +186,10 @@ export default function Chatscreen2() {
           </p>
 
           <div className="flex gap-2 mt-5">
-            <Button className="flex-1 border bg-transparent text-[#FF5241] hover:text-white">
+            <Button
+              className="flex-1 border bg-transparent text-[#FF5241] hover:text-white"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Yes, Connect Me with an Expert
             </Button>
             <Button className="flex-1 border bg-transparent text-[#FF5241] hover:text-white">
@@ -199,6 +217,10 @@ export default function Chatscreen2() {
           </button>
         </div>
       </div>
+      <ConnectExpertModal
+        isDialogOpen={isDialogOpen}
+        setIsDialogOpen={setIsDialogOpen}
+      />
     </>
   );
 }

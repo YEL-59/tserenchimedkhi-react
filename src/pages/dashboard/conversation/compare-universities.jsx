@@ -11,9 +11,11 @@ import {
 } from '@/components/ui/table';
 import { ChevronLeft } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
-export default function Chatscreen4() {
+export default function CompareUniversities() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -26,7 +28,10 @@ export default function Chatscreen4() {
           {/* Content Section */}
           <div>
             <div className="flex gap-2 pb-2 max-w-7xl mx-auto py-10">
-              <div className="flex gap-2 pb-2 py-10">
+              <div
+                className="flex gap-2 pb-2 py-10 cursor-pointer"
+                onClick={() => navigate(-1)}
+              >
                 <ChevronLeft />
                 back
               </div>

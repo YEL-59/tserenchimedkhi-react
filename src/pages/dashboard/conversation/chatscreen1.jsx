@@ -9,7 +9,7 @@ import {
   Smile,
 } from 'lucide-react';
 import { useState } from 'react';
-export default function Chatscreen1() {
+export default function ChatScreen1() {
   // const params = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
