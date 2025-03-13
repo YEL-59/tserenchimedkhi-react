@@ -38,7 +38,7 @@ export default function Chatscreen3() {
       <h1>Required Documents</h1>
       <ul>
         {documents.map((document, index) => (
-          <li key={index} className="flex gap-1">
+          <li key={index} className="flex gap-1 py-1">
             <File />
             <p>{document}</p>
           </li>
@@ -66,13 +66,13 @@ export default function Chatscreen3() {
   );
 
   const ActionButtons = () => (
-    <div className="flex gap-2 w-full">
-      <div className="flex-1 w-full">
-        <Button className="bg-[#FF5241] text-white">Connect with Expert</Button>
-      </div>
-      <div className="flex-1 w-full">
-        <Button className="bg-[#FF5241] text-white">Apply Now</Button>
-      </div>
+    <div className="flex w-full gap-4 mt-2">
+      <Button className="bg-[#FF5241] text-white flex-1 py-5 text-md font-thin">
+        Connect with Expert
+      </Button>
+      <Button className="bg-[#FF5241] text-white flex-1 py-5 text-md font-thin">
+        Apply Now
+      </Button>
     </div>
   );
 
@@ -112,15 +112,15 @@ export default function Chatscreen3() {
         </div>
 
         <div className="p-5 bg-[#FFEFED] max-w-7xl rounded mx-auto mt-5">
-          <div className="flex justify-between">
+          <div className="flex justify-between px-10">
             <DocumentList />
             <TimelineSteps />
           </div>
         </div>
       </div>
       <div className="border border-b mx-auto w-[80%] mt-5"></div>
-      <div className="max-w-7xl mx-auto">
-        <h1>Need Assistance?</h1>
+      <div className="max-w-7xl mx-auto w-full px-5">
+        <h1 className="text-lg font-semibold mb-3">Need Assistance?</h1>
         <ActionButtons />
       </div>
 
