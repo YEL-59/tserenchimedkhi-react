@@ -2,7 +2,7 @@ import { CircleAlert, X, Check } from "lucide-react";
 const Planedetail = () => {
   return (
     <div className="border-t-2 w-full container mx-auto py-10">
-      <h1 className="text-black font-montserrat text-[28px] font-semibold leading-[120%] mb-6 px-5">
+      <h1 className="text-[#000] text-start font-inter text-2xl md:text-3xl lg:text-3xl  font-medium leading-[120%] py-5">
         Workspace
       </h1>
 
@@ -38,7 +38,7 @@ const Planedetail = () => {
         </div>
       </div>
 
-      <h1 className="text-black font-montserrat text-[28px] font-semibold leading-[120%] mb-6  px-5 mt-5">
+      <h1 className="text-[#000] text-start font-inter text-2xl md:text-3xl lg:text-3xl  font-medium leading-[120%] py-5">
         Automations
       </h1>
 
@@ -61,7 +61,7 @@ const Planedetail = () => {
         </div>
       </div>
 
-      <h1 className="text-black font-montserrat text-[28px] font-semibold leading-[120%] mb-6  px-5 mt-5">
+      <h1 className="text-[#000] text-start font-inter text-2xl md:text-3xl lg:text-3xl  font-medium leading-[120%] py-5">
         Email and Calendar
       </h1>
 
