@@ -29,12 +29,12 @@ const DesignPrinciple = () => {
       <div className="container mx-auto bg-[#fff] shadow-sm">
         <div className="flex flex-col sm:flex-row justify-center gap-10 sm:gap-20 items-start p-10">
           <div className="text-center sm:text-left">
-            <h3 className="text-[#FF5241] font-montserrat text-[24px] sm:text-[28px] font-normal leading-normal tracking-[-0.24px]">
+            <h3 className="text-[#FF5241] font-montserrat text-[16px] sm:text-[28px] font-normal leading-normal tracking-[-0.24px]">
               Our Design Principles
             </h3>
           </div>
           <div className="text-center sm:text-left flex-1">
-            <p className="text-[#111] font-questrial text-[32px] sm:text-[40px] lg:text-[40px] font-normal leading-[128%] tracking-[-0.4px]">
+            <p className="text-[#111] font-questrial text-[25px] sm:text-[40px] lg:text-[40px] font-normal leading-[128%] tracking-[-0.4px]">
               Whether you're planning to study, work, or settle abroad,
               EasyMigrate is dedicated to making your migration journey
               seamless, efficient, and stress-free with AI-powered precision.
