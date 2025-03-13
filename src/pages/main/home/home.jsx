@@ -8,14 +8,12 @@ import Subscribe from '@/components/main/home/subscribe';
 const Home = () => {
   return (
     <>
-      <div>
-        <HomeBanner />
-        <SimplifyMigration />
-        <Plan />
-        <Revolutionizing />
-        <Automation />
-        <Subscribe />
-      </div>
+      <HomeBanner />
+      <SimplifyMigration />
+      <Plan />
+      <Revolutionizing />
+      <Automation />
+      <Subscribe />
     </>
   );
 };
