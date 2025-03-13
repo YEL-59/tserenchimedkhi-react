@@ -1,9 +1,10 @@
-import Chat from '@/assets/chat';
-import Icon1 from '@/assets/icon1';
-import Icon2 from '@/assets/Icon2';
-import Logout from '@/assets/logout';
-import Setting from '@/assets/setting';
-import logo from '../../../assets/Logo.png';
+import Chat from "@/assets/chat";
+import Icon1 from "@/assets/icon1";
+import Icon2 from "@/assets/Icon2";
+import Logout from "@/assets/logout";
+import Setting from "@/assets/setting";
+import logo from "../../../assets/Logo.png";
+import { Link } from "react-router";
 
 const DashboardSidebar = () => {
   return (
@@ -17,12 +18,18 @@ const DashboardSidebar = () => {
               </div>
               <div>
                 <div className="flex flex-col gap-2">
-                  <div className="h-8  w-8 bg-[#2d2e30] flex justify-center items-center hover:bg-red-600">
+                  <Link
+                    to="/dashboard/chat"
+                    className="h-8  w-8 bg-[#2d2e30] flex justify-center items-center hover:bg-red-600"
+                  >
                     <Chat />
-                  </div>
-                  <div className="h-8  w-8 bg-[#2d2e30] flex justify-center items-center hover:bg-red-600">
+                  </Link>
+                  <Link
+                    to="/dashboard/settings"
+                    className="h-8  w-8 bg-[#2d2e30] flex justify-center items-center hover:bg-red-600"
+                  >
                     <Setting />
-                  </div>
+                  </Link>
                   <div className="h-8  w-8 bg-[#2d2e30] flex justify-center items-center hover:bg-red-600">
                     <Icon1 />
                   </div>
