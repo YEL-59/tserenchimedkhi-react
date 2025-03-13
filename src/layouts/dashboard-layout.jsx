@@ -1,4 +1,5 @@
 import DashboardSidebar from "@/components/dashboard/dashboard-sidebar";
+import NavBar from "@/components/dashboard/NavBar";
 
 import { Outlet } from "react-router";
 
@@ -11,7 +12,7 @@ export default function DashboardLayout() {
       </aside>
       <div className="flex-1 ">
         <div>
-          <h1>Navbar!</h1>
+          <NavBar />
         </div>
         <Outlet />
       </div>
