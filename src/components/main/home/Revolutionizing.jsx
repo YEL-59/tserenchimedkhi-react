@@ -56,7 +56,7 @@ const Revolutionizing = () => {
 
           <div>
             <div>
-              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-[97px] tracking-tight max-w-2xl">
+              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-[97px] tracking-tight max-w-2xl mb-5">
                 Revolutionizing migration with AI-driven collaboration.
               </h1>
               <p>
