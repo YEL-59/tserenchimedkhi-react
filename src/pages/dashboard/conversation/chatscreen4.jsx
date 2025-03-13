@@ -1,8 +1,5 @@
-import AttachmentModal from "@/components/dashboard/AttachmentModal";
-import { Button } from "@/components/ui/button";
-import { Smile, Copy, Bookmark } from "lucide-react";
-import { Mic, ArrowRight, Paperclip } from "lucide-react";
-import { useState } from "react";
+import AttachmentModal from '@/components/dashboard/attachment-modal';
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
@@ -11,8 +8,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { ChevronLeft } from "lucide-react";
+} from '@/components/ui/table';
+import { ChevronLeft } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Chatscreen4() {
   const [isModalOpen, setIsModalOpen] = useState(false);

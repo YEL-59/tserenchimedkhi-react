@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/select';
 import { BellRing } from 'lucide-react';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className="container mx-auto">
       <div className="flex justify-between items-center py-4">
@@ -57,4 +57,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

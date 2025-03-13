@@ -1,8 +1,9 @@
-import AttachmentModal from "@/components/dashboard/AttachmentModal";
-import { Button } from "@/components/ui/button";
-import { Smile, Copy, Bookmark } from "lucide-react";
-import { Mic, ArrowRight, Paperclip } from "lucide-react";
-import { useState } from "react";
+import Icon5 from '@/assets/icon5';
+import Icon6 from '@/assets/icon6';
+import Icon7 from '@/assets/icon7';
+import Icon8 from '@/assets/icon8';
+import AttachmentModal from '@/components/dashboard/attachment-modal';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -10,11 +11,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import Icon5 from "@/assets/icon5";
-import Icon6 from "@/assets/icon6";
-import Icon7 from "@/assets/icon7";
-import Icon8 from "@/assets/icon8";
+} from '@/components/ui/card';
+import { ArrowRight, Mic, Paperclip } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Chatscreen2() {
   // const params = useParams();
@@ -22,35 +21,35 @@ export default function Chatscreen2() {
   const cardData = [
     {
       id: 1,
-      university: "University of Melbourne",
-      program: "Master of Data Science",
+      university: 'University of Melbourne',
+      program: 'Master of Data Science',
       features: [
-        { icon: <Icon5 />, text: "Student Visa (Subclass 500)" },
-        { icon: <Icon6 />, text: "Full-time study option" },
-        { icon: <Icon7 />, text: "Scholarships available" },
-        { icon: <Icon8 />, text: "Internship opportunities" },
+        { icon: <Icon5 />, text: 'Student Visa (Subclass 500)' },
+        { icon: <Icon6 />, text: 'Full-time study option' },
+        { icon: <Icon7 />, text: 'Scholarships available' },
+        { icon: <Icon8 />, text: 'Internship opportunities' },
       ],
     },
     {
       id: 2,
-      university: "Harvard University",
-      program: "MBA Program",
+      university: 'Harvard University',
+      program: 'MBA Program',
       features: [
-        { icon: <Icon5 />, text: "Student Visa (F-1)" },
-        { icon: <Icon6 />, text: "2-year program" },
-        { icon: <Icon7 />, text: "Global networking" },
-        { icon: <Icon8 />, text: "Leadership training" },
+        { icon: <Icon5 />, text: 'Student Visa (F-1)' },
+        { icon: <Icon6 />, text: '2-year program' },
+        { icon: <Icon7 />, text: 'Global networking' },
+        { icon: <Icon8 />, text: 'Leadership training' },
       ],
     },
     {
       id: 3,
-      university: "Stanford University",
-      program: "Computer Science PhD",
+      university: 'Stanford University',
+      program: 'Computer Science PhD',
       features: [
-        { icon: <Icon5 />, text: "Research-focused" },
-        { icon: <Icon6 />, text: "5-year duration" },
-        { icon: <Icon7 />, text: "Full funding available" },
-        { icon: <Icon8 />, text: "Industry collaborations" },
+        { icon: <Icon5 />, text: 'Research-focused' },
+        { icon: <Icon6 />, text: '5-year duration' },
+        { icon: <Icon7 />, text: 'Full funding available' },
+        { icon: <Icon8 />, text: 'Industry collaborations' },
       ],
     },
   ];

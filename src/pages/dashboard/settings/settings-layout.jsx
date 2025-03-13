@@ -1,6 +1,6 @@
-import { Outlet } from "react-router";
-import { Navbar } from "./navbar";
-import { Sidebar } from "./sidebar";
+import { Outlet } from 'react-router';
+import { Navbar } from './navbar';
+import { Sidebar } from './sidebar';
 
 export default function SettingsLayout() {
   return (

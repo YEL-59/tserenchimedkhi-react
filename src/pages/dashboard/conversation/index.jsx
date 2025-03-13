@@ -1,7 +1,13 @@
-import AttachmentModal from "@/components/dashboard/AttachmentModal";
-import { Smile, Copy, Bookmark } from "lucide-react";
-import { Mic, ArrowRight, Paperclip } from "lucide-react";
-import { useState } from "react";
+import AttachmentModal from '@/components/dashboard/attachment-modal';
+import {
+  ArrowRight,
+  Bookmark,
+  Copy,
+  Mic,
+  Paperclip,
+  Smile,
+} from 'lucide-react';
+import { useState } from 'react';
 export default function Conversation() {
   // const params = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
