@@ -55,12 +55,12 @@ const plans = [
 const Plan = () => {
   return (
     <>
-      <div className="py-10 container mx-auto">
+      <div className="py-10 container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-black font-montserrat text-[71px] not-italic font-medium leading-[97px]">
+          <h1 className="text-black font-montserrat text-4xl md:text-5xl lg:text-[71px] font-medium leading-tight lg:leading-[97px]">
             Choose the Perfect Plan for You
           </h1>
-          <p className="text-black/80 font-montserrat text-base not-italic font-normal leading-[30px] max-w-[60rem] mx-auto">
+          <p className="text-black/80 font-montserrat text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
             Finding the right plan is key to unlocking the full potential of
             your migration journey with MoveSmart. Whether you're a student
             relocating for studies or a professional managing a complex move,
@@ -68,38 +68,34 @@ const Plan = () => {
           </p>
         </div>
 
-        <div className="  py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
-            <Card
-              key={index}
-              className=" w-[447px] max-w-xl flex flex-col h-full"
-            >
+            <Card key={index} className="w-full flex flex-col h-full">
               <CardHeader>
-                <CardTitle className="text-black font-montserrat text-[24px] not-italic font-semibold leading-normal">
+                <CardTitle className="text-black font-montserrat text-xl md:text-2xl font-semibold">
                   {plan.title}
                 </CardTitle>
-                <CardDescription className="text-black/63 text-base not-italic font-normal leading-[30px]">
+                <CardDescription className="text-black/63 text-sm md:text-base">
                   {plan.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-black text-[48px] not-italic font-semibold leading-normal">
+                <p className="text-black text-3xl md:text-4xl font-semibold">
                   {plan.price}
                 </p>
               </CardContent>
               <CardContent className="flex-grow">
                 <ul>
                   {plan.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 mb-5">
+                    <li key={index} className="flex items-center gap-2 mb-3">
                       <Righticon />
-                      <p className="text-black text-sm not-italic font-medium leading-normal">
+                      <p className="text-black text-sm md:text-base font-medium">
                         {feature}
                       </p>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              {/* Footer stays at the bottom */}
               <CardFooter className="mt-auto">
                 <Button className="w-full">Get This Plan</Button>
               </CardFooter>

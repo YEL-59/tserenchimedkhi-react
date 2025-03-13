@@ -10,45 +10,38 @@ const Footer = () => {
   ];
 
   return (
-    <>
-      <div className="container mx-auto py-5">
-        <div className=" flex justify-between items-center ">
-          <div>
-            <h1 className="text-5xl font-bold">EasyRate</h1>
-          </div>
-          <div className="max-w-xl ">
-            <h2 className="text-2xl font-normal mb-5">
-              EasyMigrate - Migration AI Platform
-            </h2>
-            <p>
-              Welcome to EasyMigrate, your all-in-one AI-powered migration
-              platform designed to revolutionize the way you plan, manage, and
-              execute your relocation. With a focus on simplicity and
-              efficiency, EasyMigrate empowers individuals and organizations to
-              navigate their migration journey seamlessly.
-            </p>
-          </div>
+    <div className="container mx-auto py-10 px-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold">EasyRate</h1>
         </div>
-        <div className="border border-b mt-5 mb-5"></div>
-        <div className="flex justify-between">
-          <div>
-            <ul
-              className="hidden md:flex gap-10 text-black font-montserrat text-base not-italic font-normal leading-normal
-"
-            >
-              {navitems.map((item, index) => (
-                <li key={index} className="hover:text-gray-700 transition">
-                  <Link to={item.url}>{item.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p>Copyright © 2024 • Company.</p>
-          </div>
+        <div className="max-w-2xl mt-5 lg:mt-0">
+          <h2 className="text-xl md:text-2xl font-normal mb-3 md:mb-5">
+            EasyMigrate - Migration AI Platform
+          </h2>
+          <p className="text-sm md:text-base text-gray-700">
+            Welcome to EasyMigrate, your all-in-one AI-powered migration
+            platform designed to revolutionize the way you plan, manage, and
+            execute your relocation. With a focus on simplicity and efficiency,
+            EasyMigrate empowers individuals and organizations to navigate their
+            migration journey seamlessly.
+          </p>
         </div>
       </div>
-    </>
+      <div className="border border-b mt-5 mb-5"></div>
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <ul className="flex flex-wrap justify-center md:justify-start gap-5 md:gap-10 text-black font-montserrat text-sm md:text-base font-normal">
+          {navitems.map((item, index) => (
+            <li key={index} className="hover:text-gray-700 transition">
+              <Link to={item.url}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-5 md:mt-0">
+          <p className="text-sm md:text-base">Copyright © 2024 • Company.</p>
+        </div>
+      </div>
+    </div>
   );
 };
 

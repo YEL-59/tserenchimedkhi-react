@@ -22,7 +22,7 @@ const Revolutionizing = () => {
   return (
     <>
       <div className="py-20 container mx-auto">
-        <div className="flex gap-10">
+        <div className="flex flex-col lg:flex-row gap-10">
           <div className="relative">
             <img src={revolutionizing} alt="Revolutionizing Migration" />
 
@@ -30,22 +30,22 @@ const Revolutionizing = () => {
               <Arrow />
             </div>
 
-            <div className="absolute bottom-[2rem] left-24">
-              <Card className="max-w-xl w-[409px] border-0 shadow-[0px_4px_44.5px_0px_rgba(0,0,0,0.03)]">
+            <div className="absolute bottom-[5rem] left-16 hidden xl:block">
+              <Card className="max-w-xl w-[309px] border-0 shadow-[0px_4px_44.5px_0px_rgba(0,0,0,0.03)]">
                 <CardHeader>
                   <CardTitle>
                     <div className="flex gap-5 items-center">
                       <div>
                         <Task />
                       </div>
-                      <h2 className="text-black text-xl not-italic font-semibold leading-[30px]">
+                      <h2 className="text-black text-sm not-italic font-semibold leading-[30px]">
                         Customizable integrations for seamless migration.
                       </h2>
                     </div>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="max-w-sm text-black/80 text-base not-italic font-normal leading-[30px]">
+                  <p className="max-w-sm text-black/80 text-xs not-italic font-normal leading-[30px]">
                     Effortlessly integrate MoveSmart with your favorite tools
                     for a seamless migration.
                   </p>
@@ -56,7 +56,7 @@ const Revolutionizing = () => {
 
           <div>
             <div>
-              <h1 className="text-black font-montserrat text-[71px] not-italic font-medium leading-[97px] tracking-tight max-w-2xl">
+              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-[97px] tracking-tight max-w-2xl">
                 Revolutionizing migration with AI-driven collaboration.
               </h1>
               <p>
