@@ -1,24 +1,17 @@
-import Graph from "@/assets/graph1";
-import line from "../../../assets/Line.png";
-import bannerbg from "../../../assets/banner.png";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Graph2 from "@/assets/graph2";
-import { Button } from "../../ui/button";
-import Task from "@/assets/task";
-import Logo1 from "@/assets/logo1";
-import Task1 from "@/assets/task1";
-import Logo2 from "@/assets/logo2";
-import Logo3 from "@/assets/logo3";
-import Logo4 from "@/assets/logo4";
-import Logo5 from "@/assets/logo5";
-import { Link } from "react-router";
+import Graph from '@/assets/graph1';
+import Graph2 from '@/assets/graph2';
+import Logo1 from '@/assets/logo1';
+import Logo2 from '@/assets/logo2';
+import Logo3 from '@/assets/logo3';
+import Logo4 from '@/assets/logo4';
+import Logo5 from '@/assets/logo5';
+import Task from '@/assets/task';
+import Task1 from '@/assets/task1';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router';
+import line from '../../../assets/Line.png';
+import bannerbg from '../../../assets/banner.png';
+import { Button } from '../../ui/button';
 
 const HomeBanner = () => {
   return (
@@ -80,9 +73,7 @@ const HomeBanner = () => {
             </p>
             <div className="flex gap-5 mt-5 mb-5">
               <Link to="/dashboard/chat">
-                <Button className="px-7 py-3 bg-red-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-                  Get Started
-                </Button>
+                <Button>Get Started</Button>
               </Link>
               <Button className="bg-white text-black border px-7 py-2">
                 Contact Us
@@ -108,7 +99,7 @@ const HomeBanner = () => {
                           >
                             Task Automation
                           </h2>
-                        </div>{" "}
+                        </div>{' '}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -140,7 +131,7 @@ const HomeBanner = () => {
                           >
                             Real-Time Collaborate
                           </h2>
-                        </div>{" "}
+                        </div>{' '}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>

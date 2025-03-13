@@ -1,6 +1,4 @@
-import Folder from "@/assets/folder";
-import { Button } from "../../ui/button";
-import line1 from "../../../assets/Line (1).png";
+import Folder from '@/assets/folder';
 import {
   Card,
   CardContent,
@@ -8,8 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import migration from "../../../assets/migration.png";
+} from '@/components/ui/card';
+import line1 from '../../../assets/Line (1).png';
+import migration from '../../../assets/migration.png';
+import { Button } from '../../ui/button';
 
 const SimplifyMigration = () => {
   return (
@@ -55,7 +55,7 @@ const SimplifyMigration = () => {
                 </div>
                 <div>
                   <div className="flex flex-col gap-2">
-                    {" "}
+                    {' '}
                     <div className=" text-start p-0">
                       <h1 className="text-4xl font-semibold">30%</h1>
 
@@ -68,9 +68,9 @@ const SimplifyMigration = () => {
                       </p>
                     </div>
                     <div>
-                      {" "}
+                      {' '}
                       <div>
-                        {" "}
+                        {' '}
                         <div className=" text-start p-0">
                           <h1 className="text-4xl font-semibold">90%</h1>
 
