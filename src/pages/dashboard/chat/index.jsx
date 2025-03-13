@@ -76,35 +76,41 @@
 //   );
 // }
 
-
-import Chatlogo from '@/assets/Chatlogo';
-import Icon4 from '@/assets/Icon4';
-import { ArrowRight, Mic, Paperclip } from 'lucide-react';
+import Chatlogo from "@/assets/Chatlogo";
+import Icon4 from "@/assets/Icon4";
+import AttachmentModal from "@/components/dashboard/attachment-modal";
+import { ArrowRight, Mic, Paperclip } from "lucide-react";
+import { useState } from "react";
 
 export default function Chat() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const cardData = [
     {
-      title: 'Quick Queries',
-      description: 'Instant answers to common migration-related questions.',
+      title: "Quick Queries",
+      description: "Instant answers to common migration-related questions.",
     },
     {
-      title: 'Application Assistance',
-      description: 'Help with forms, GTE writing, and submission tracking',
+      title: "Application Assistance",
+      description: "Help with forms, GTE writing, and submission tracking",
     },
     {
-      title: 'Details Pathway',
+      title: "Details Pathway",
       description:
-        'Comprehensive migration guidance, including visa assistance, job search, and legal advice.',
+        "Comprehensive migration guidance, including visa assistance, job search, and legal advice.",
     },
     {
-      title: 'Migration Pathway Plans',
+      title: "Migration Pathway Plans",
       description:
-        'Explore Tailored Migration Pathway Plans to Achieve Your Dream Destination with AI',
+        "Explore Tailored Migration Pathway Plans to Achieve Your Dream Destination with AI",
     },
   ];
 
   return (
     <div className="flex flex-col h-screen">
+      <AttachmentModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center items-center p-4 sm:p-6 lg:p-10">
         <div className="text-center flex flex-col justify-center items-center">
@@ -149,7 +155,10 @@ export default function Chat() {
       <div className="w-full max-w-7xl flex items-center border border-gray-300 bg-[#1E1F22] rounded-full p-2 sm:p-3 lg:p-4 shadow-md mb-5 mx-auto">
         {/* Attachment Icon */}
         <div className="bg-[#424346] h-8 w-8 sm:h-10 sm:w-10 rounded-full flex justify-center items-center">
-          <Paperclip className="text-white w-4 h-4 sm:w-6 sm:h-6 cursor-pointer" />
+          <Paperclip
+            onClick={() => setIsModalOpen(true)}
+            className="text-white w-4 h-4 sm:w-6 sm:h-6 cursor-pointer"
+          />
         </div>
 
         {/* Input Field */}
