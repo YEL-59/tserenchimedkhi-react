@@ -1,42 +1,40 @@
-import Folder from "@/assets/folder";
-import { Button } from "../../ui/button";
+import Task from '@/assets/task';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import Task from "@/assets/task";
+} from '@/components/ui/card';
+import { Button } from '../../ui/button';
 
 // Card Data Array
 const automationCards = [
   {
     id: 1,
     icon: <Task />,
-    title: "Task Automation",
+    title: 'Task Automation',
     description:
-      "Our platform automates your migration journey with smart triggers and actions, making relocation seamless and stress-free.",
+      'Our platform automates your migration journey with smart triggers and actions, making relocation seamless and stress-free.',
   },
   {
     id: 2,
     icon: <Task />,
-    title: "Workflow Integration",
+    title: 'Workflow Integration',
     description:
-      "Seamlessly integrate automated workflows to enhance your migration process with minimal effort.",
+      'Seamlessly integrate automated workflows to enhance your migration process with minimal effort.',
   },
   {
     id: 3,
     icon: <Task />,
-    title: "Custom Triggers",
+    title: 'Custom Triggers',
     description:
-      "Set up custom triggers that automatically handle migration steps, reducing manual intervention.",
+      'Set up custom triggers that automatically handle migration steps, reducing manual intervention.',
   },
   {
     id: 4,
     icon: <Task />,
-    title: "Smart Notifications",
+    title: 'Smart Notifications',
     description:
       "Stay updated with automated notifications ensuring you're always informed throughout the process.",
   },
@@ -45,7 +43,7 @@ const automationCards = [
 const Automation = () => {
   return (
     <>
-      <div className="py-20 container mx-auto">
+      <div className="py-20 container">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <h1 className="text-black font-montserrat text-[71px] not-italic font-medium leading-[97px] tracking-tight max-w-2xl">
             Unlock seamless automation for efficient migration.
