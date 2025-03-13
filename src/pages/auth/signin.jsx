@@ -1,3 +1,5 @@
+/* eslint-disable no-irregular-whitespace */
+
 import Google from "@/assets/gooogle";
 import bg1 from "../../assets/content1.png";
 import bg2 from "../../assets/content2.png";
@@ -28,17 +30,18 @@ const Signin = () => {
   });
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center">
+        {/* Left Section */}
         <div
-          className="h-screen w-full flex items-center justify-start bg-cover bg-center"
+          className="w-full lg:w-1/2 h-screen flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${bg1})` }}
         >
-          <div className="p-20 max-w-7xl mx-auto">
-            <h1 className="text-[#120A0B] text-center font-montserrat text-[36px] font-bold leading-[140%] tracking-[-1px]">
+          <div className="p-8 lg:p-20 max-w-lg mx-auto w-full">
+            <h1 className="text-[#120A0B] text-center font-montserrat text-3xl lg:text-4xl font-bold leading-[140%] tracking-[-1px] mb-4">
               Welcome Back!
             </h1>
 
-            <p className="text-[#454140] text-center font-montserrat text-[16px] font-normal leading-[170%] mb-8">
+            <p className="text-[#454140] text-center font-montserrat text-sm lg:text-md font-normal leading-[170%] mb-6">
               Please fill in your Email and Password to Sign In.
             </p>
 
@@ -50,7 +53,7 @@ const Signin = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Username</FormLabel>
+                        <FormLabel>Email Address</FormLabel>
                         <FormControl>
                           <Input placeholder="Email Address" {...field} />
                         </FormControl>
@@ -75,31 +78,32 @@ const Signin = () => {
                       </FormItem>
                     )}
                   />
-                  <Button className="w-full h-12 mb-10 mt-5" type="submit">
+                  <Button className="w-full h-12 mb-6 mt-5" type="submit">
                     Sign In
                   </Button>
                 </div>
 
-                <div className="flex flex-col gap-5 ">
+                <div className="flex flex-col gap-4">
                   <Button
-                    className="w-full h-12 bg-white text-black"
+                    className="w-full h-12 bg-white text-black flex items-center justify-center gap-2"
                     type="submit"
                   >
                     <Google />
-                    <p>Sign in with Google</p>
+                    <span>Sign in with Google</span>
                   </Button>
                   <Button
-                    className="w-full h-12  bg-white text-black"
+                    className="w-full h-12 bg-white text-black flex items-center justify-center gap-2"
                     type="submit"
                   >
                     <Apple />
-                    <p>Sign in with Apple</p>
+                    <span>Sign in with Apple</span>
                   </Button>
                 </div>
+
                 <div className="flex justify-center">
-                  <p className="text-foreground/70 space-x-2">
+                  <p className="text-foreground/70 space-x-2 text-sm">
                     <span>Don’t have an Account?</span>
-                    <Link to="/auth/sign-up" className="font-medium">
+                    <Link to="/sign-up" className="font-medium">
                        Sign-Up here!
                     </Link>
                   </p>
@@ -108,10 +112,12 @@ const Signin = () => {
             </Form>
           </div>
         </div>
+
+        {/* Right Section */}
         <div
-          className="h-screen w-full flex items-center justify-start bg-cover bg-center"
+          className="w-full lg:w-1/2 h-screen flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${bg2})` }}
-        ></div>
+        />
       </div>
     </div>
   );
