@@ -21,16 +21,16 @@ const features = [
 const Revolutionizing = () => {
   return (
     <>
-      <div className="py-20 container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-10">
+      <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 container mx-auto mt-8">
+        <div className="flex flex-col-reverse lg:flex-row gap-10">
           <div className="relative">
-            <img src={revolutionizing} alt="Revolutionizing Migration" />
+            <img src={revolutionizing} alt="Revolutionizing Migration" className="hidden lg:block" />
 
-            <div className="absolute -top-32 -left-24">
+            <div className="absolute -top-32 -left-24 hidden lg:block">
               <Arrow />
             </div>
 
-            <div className="absolute bottom-[5rem] left-16 hidden xl:block">
+            <div className="absolute bottom-[5rem] left-16 hidden lg:block">
               <Card className="max-w-xl w-[309px] border-0 shadow-[0px_4px_44.5px_0px_rgba(0,0,0,0.03)]">
                 <CardHeader>
                   <CardTitle>
@@ -56,7 +56,7 @@ const Revolutionizing = () => {
 
           <div>
             <div>
-              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-[97px] tracking-tight max-w-2xl mb-5">
+              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-tight tracking-tight max-w-2xl mb-5">
                 Revolutionizing migration with AI-driven collaboration.
               </h1>
               <p>

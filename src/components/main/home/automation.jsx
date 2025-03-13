@@ -42,7 +42,7 @@ const automationCards = [
 
 const Automation = () => {
   return (
-    <div className="py-16 px-4 container mx-auto">
+    <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 px-4 container mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left">
         <h1 className="text-black font-montserrat text-3xl md:text-5xl font-medium leading-tight max-w-2xl">
           Unlock seamless automation for efficient migration.
