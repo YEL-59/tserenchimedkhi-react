@@ -7,36 +7,40 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../../ui/button";
+import Task1 from "@/assets/task1";
+import Task3 from "@/assets/Task3";
+import Task4 from "@/assets/Task4";
+import Task2 from "@/assets/Task2";
 
 // Card Data Array
 const automationCards = [
   {
     id: 1,
     icon: <Task />,
-    title: "Task Automation",
+    title: "Get timely updates with notifications.",
     description:
-      "Our platform automates your migration journey with smart triggers and actions, making relocation seamless and stress-free.",
+      "Stay on top with automated notifications and reminders, ensuring deadlines are met and nothing is missed.",
   },
   {
     id: 2,
-    icon: <Task />,
-    title: "Workflow Integration",
+    icon: <Task2 />,
+    title: "Tailor access to document review",
     description:
-      "Seamlessly integrate automated workflows to enhance your migration process with minimal effort.",
+      "ailor access to document review, ensuring only authorized users handle sensitive migration paperwork.",
   },
   {
     id: 3,
-    icon: <Task />,
-    title: "Custom Triggers",
+    icon: <Task3 />,
+    title: "Effortless Process Tracking",
     description:
-      "Set up custom triggers that automatically handle migration steps, reducing manual intervention.",
+      "Track your migration process effortlessly with real-time updates and insights.",
   },
   {
     id: 4,
-    icon: <Task />,
-    title: "Smart Notifications",
+    icon: <Task4 />,
+    title: "Actionable Analytics",
     description:
-      "Stay updated with automated notifications ensuring you're always informed throughout the process.",
+      "Gain actionable analytics to optimize your migration journey and make informed decisions.",
   },
 ];
 
