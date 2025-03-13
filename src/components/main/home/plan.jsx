@@ -55,7 +55,7 @@ const plans = [
 const Plan = () => {
   return (
     <>
-      <div className="py-10 container mx-auto px-4">
+      <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-black font-montserrat text-4xl md:text-5xl lg:text-[71px] font-medium leading-tight lg:leading-[97px]">
             Choose the Perfect Plan for You

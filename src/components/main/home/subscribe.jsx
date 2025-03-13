@@ -3,7 +3,7 @@ import { Input } from "../../ui/input";
 
 const Subscribe = () => {
   return (
-    <div className="py-16 px-4 flex flex-col items-center text-center">
+    <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 px-4 flex flex-col items-center text-center">
       <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-5xl font-medium leading-tight max-w-4xl">
         Start your migration journey with EasyMigrate. Subscribe now!
       </h1>

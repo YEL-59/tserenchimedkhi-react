@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
       <div>
-        <HomeBanner />
-        <SimplifyMigration />
+        {/* <HomeBanner />
+        <SimplifyMigration /> */}
         <Plan />
         <Revolutionizing />
         <Automation />
