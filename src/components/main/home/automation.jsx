@@ -1,46 +1,45 @@
-import Task from "@/assets/task";
+import Task from '@/assets/task';
+import Task2 from '@/assets/Task2';
+import Task3 from '@/assets/Task3';
+import Task4 from '@/assets/Task4';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Button } from "../../ui/button";
-import Task1 from "@/assets/task1";
-import Task3 from "@/assets/Task3";
-import Task4 from "@/assets/Task4";
-import Task2 from "@/assets/Task2";
+} from '@/components/ui/card';
+import { Button } from '../../ui/button';
 
 // Card Data Array
 const automationCards = [
   {
     id: 1,
     icon: <Task />,
-    title: "Get timely updates with notifications.",
+    title: 'Get timely updates with notifications.',
     description:
-      "Stay on top with automated notifications and reminders, ensuring deadlines are met and nothing is missed.",
+      'Stay on top with automated notifications and reminders, ensuring deadlines are met and nothing is missed.',
   },
   {
     id: 2,
     icon: <Task2 />,
-    title: "Tailor access to document review",
+    title: 'Tailor access to document review',
     description:
-      "ailor access to document review, ensuring only authorized users handle sensitive migration paperwork.",
+      'ailor access to document review, ensuring only authorized users handle sensitive migration paperwork.',
   },
   {
     id: 3,
     icon: <Task3 />,
-    title: "Effortless Process Tracking",
+    title: 'Effortless Process Tracking',
     description:
-      "Track your migration process effortlessly with real-time updates and insights.",
+      'Track your migration process effortlessly with real-time updates and insights.',
   },
   {
     id: 4,
     icon: <Task4 />,
-    title: "Actionable Analytics",
+    title: 'Actionable Analytics',
     description:
-      "Gain actionable analytics to optimize your migration journey and make informed decisions.",
+      'Gain actionable analytics to optimize your migration journey and make informed decisions.',
   },
 ];
 
@@ -48,7 +47,7 @@ const Automation = () => {
   return (
     <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 px-4 container mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left">
-        <h1 className="text-black font-montserrat text-3xl md:text-5xl font-medium leading-tight max-w-2xl">
+        <h1 className="text-black font-montserrat sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium max-w-3xl">
           Unlock seamless automation for efficient migration.
         </h1>
         <div className="mt-5 lg:mt-0 max-w-lg">

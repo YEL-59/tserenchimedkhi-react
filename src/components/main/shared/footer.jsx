@@ -1,12 +1,12 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
 
 const Footer = () => {
   const navitems = [
-    { title: "About us", url: "about" },
-    { title: "Contact us", url: "/#" },
-    { title: "Help", url: "#" },
-    { title: "Privacy Policy", url: "#" },
-    { title: "Disclaimer", url: "#" },
+    { title: 'About us', url: 'about' },
+    { title: 'Contact us', url: '/#' },
+    { title: 'Help', url: '#' },
+    { title: 'Privacy Policy', url: '#' },
+    { title: 'Disclaimer', url: '#' },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border border-b mt-5 mb-5"></div>
-      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <div className="flex flex-col xl:flex-row justify-between items-center text-center md:text-left gap-5">
         <ul className="flex flex-wrap justify-center md:justify-start gap-5 md:gap-10 text-black font-montserrat text-sm md:text-base font-normal">
           {navitems.map((item, index) => (
             <li key={index} className="hover:text-gray-700 transition">
@@ -37,7 +37,7 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-5 md:mt-0">
+        <div className="">
           <p className="text-sm md:text-base">Copyright © 2024 • Company.</p>
         </div>
       </div>

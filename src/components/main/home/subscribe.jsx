@@ -1,10 +1,10 @@
-import { Button } from "../../ui/button";
-import { Input } from "../../ui/input";
+import { Button } from '../../ui/button';
+import { Input } from '../../ui/input';
 
 const Subscribe = () => {
   return (
     <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 px-4 flex flex-col items-center text-center">
-      <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-5xl font-medium leading-tight max-w-4xl">
+      <h1 className="text-black font-montserrat sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium max-w-5xl">
         Start your migration journey with EasyMigrate. Subscribe now!
       </h1>
 

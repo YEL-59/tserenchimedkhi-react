@@ -1,21 +1,14 @@
-import Arrow from "@/assets/arrow";
-import revolutionizing from "../../../assets/revolutionizing.png";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Task from "@/assets/task";
-import Right from "@/assets/right";
+import Arrow from '@/assets/arrow';
+import Right from '@/assets/right';
+import Task from '@/assets/task';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import revolutionizing from '../../../assets/revolutionizing.png';
 
 const features = [
-  "Comprehensive AI-powered migration management.",
-  "Seamless integration with your favorite tools.",
-  "Effortless document handling for relocation.",
-  "Real-time notifications and updates on migration status.",
+  'Comprehensive AI-powered migration management.',
+  'Seamless integration with your favorite tools.',
+  'Effortless document handling for relocation.',
+  'Real-time notifications and updates on migration status.',
 ];
 
 const Revolutionizing = () => {
@@ -24,8 +17,11 @@ const Revolutionizing = () => {
       <div className="py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 container mx-auto mt-8">
         <div className="flex flex-col-reverse lg:flex-row gap-10">
           <div className="relative">
-            <img src={revolutionizing} alt="Revolutionizing Migration" className="hidden lg:block" />
-
+            <img
+              src={revolutionizing}
+              alt="Revolutionizing Migration"
+              className="hidden lg:block"
+            />
             <div className="absolute -top-32 -left-24 hidden lg:block">
               <Arrow />
             </div>
@@ -56,7 +52,7 @@ const Revolutionizing = () => {
 
           <div>
             <div>
-              <h1 className="text-black font-montserrat text-3xl md:text-4xl lg:text-6xl font-medium leading-tight tracking-tight max-w-2xl mb-5">
+              <h1 className="text-black font-montserrat sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium tracking-tight max-w-3xl mb-5">
                 Revolutionizing migration with AI-driven collaboration.
               </h1>
               <p>

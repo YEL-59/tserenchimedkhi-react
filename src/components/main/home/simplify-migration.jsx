@@ -14,11 +14,11 @@ import { Button } from '../../ui/button';
 const SimplifyMigration = () => {
   return (
     <>
-      <div className="container mx-auto py-20">
-        <div className="flex justify-between gap-10">
+      <div className="container pt-10 pb-32 xl:py-20">
+        <div className="flex flex-col xl:flex-row justify-between items-center xl:items-start gap-10">
           <div>
             <div>
-              <h1 className="text-black font-montserrat text-[71px] not-italic font-medium leading-[97px] max-w-2xl">
+              <h1 className="text-black font-montserrat text-[32px] sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] not-italic font-medium leading-[1.4] max-w-2xl">
                 Simplify migration with AI-powered automation.
               </h1>
               <p className="text-[16px] font-normal leading-[30px]">
@@ -31,9 +31,9 @@ const SimplifyMigration = () => {
                   Book a Meeting
                 </Button>
               </div>
-              <div className="flex gap-10">
+              <div className="flex flex-col sm:flex-row gap-10">
                 <div>
-                  <Card className="max-w-[288px] text-center flex flex-col items-center">
+                  <Card className="w-full sm:max-w-[288px] text-center flex flex-col items-center">
                     <CardHeader className="flex flex-col items-center">
                       <Folder className="w-6 h-6" />
                       <CardTitle className="text-center">

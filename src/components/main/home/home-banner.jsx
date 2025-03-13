@@ -26,7 +26,7 @@ const HomeBanner = () => {
               <img src={bannerbg} alt="Globe" className="w-full" />
             </div>
             <div className="flex-1">
-              <h1 className="text-[24px] sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] font-medium">
+              <h1 className="text-[32px] sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium">
                 Transform Your Migration Efficiency
               </h1>
               <p className="text-[16px] font-normal max-w-xl">
