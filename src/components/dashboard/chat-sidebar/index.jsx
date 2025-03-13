@@ -2,7 +2,7 @@ import Icon3 from '@/assets/Icon3';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import useAvailableHeight from '@/hooks/useAvailableHeight';
-import { Ellipsis, MessageCircle, Plus } from 'lucide-react';
+import { Bookmark, Ellipsis, MessageCircle, Plus } from 'lucide-react';
 import { Link } from 'react-router';
 import { uid } from 'uid';
 import logo from '../../../assets/image 29.png';
@@ -147,7 +147,7 @@ export default function Sidebar() {
               value="saved"
               className="bg-transparent data-[state=active]:bg-[#1E1F22]  text-background data-[state=active]:text-[#FF8B41]"
             >
-              <MessageCircle className="size-5" /> Saved{' '}
+              <Bookmark className="size-5" /> Saved{' '}
               <span className="h-4 w-4 px-3 rounded ml-2 flex justify-center items-center ">
                 12
               </span>
