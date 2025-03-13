@@ -5,6 +5,7 @@ import { Outlet, useLocation } from "react-router";
 
 export default function DashboardLayout() {
   const { pathname } = useLocation();
+
   return (
     <div className="flex h-screen">
       <DashboardSidebar />
