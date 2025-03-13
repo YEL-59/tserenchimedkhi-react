@@ -27,20 +27,22 @@ const Signup = () => {
       password: "",
     },
   });
+
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row items-center">
+        {/* Left Section */}
         <div
-          className="h-screen w-full flex items-center justify-start bg-cover bg-center"
+          className="w-full lg:w-1/2 h-screen flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${bg1})` }}
         >
-          <div className="p-20 max-w-7xl mx-auto">
-            <h1 className="text-[#120A0B] text-center font-montserrat text-[36px] font-bold leading-[140%] tracking-[-1px]">
+          <div className="p-8 lg:p-20 max-w-lg mx-auto w-full">
+            <h1 className="text-[#120A0B] text-center font-montserrat text-xl lg:text-2xl font-bold leading-[140%] tracking-[-1px] mb-4">
               Create Your Account
             </h1>
 
-            <p className="text-[#454140] text-center font-montserrat text-[16px] font-normal leading-[170%] mb-8">
-              Please Fill in your details here
+            <p className="text-[#454140] text-center font-montserrat text-sm lg:text-base font-normal leading-[170%] mb-6">
+              Please fill in your details to sign up.
             </p>
 
             <Form {...form}>
@@ -51,9 +53,9 @@ const Signup = () => {
                     name="fullname"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Fullname</FormLabel>
+                        <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Name" {...field} />
+                          <Input placeholder="Full Name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -64,7 +66,7 @@ const Signup = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Username</FormLabel>
+                        <FormLabel>Email Address</FormLabel>
                         <FormControl>
                           <Input placeholder="Email Address" {...field} />
                         </FormControl>
@@ -89,32 +91,33 @@ const Signup = () => {
                       </FormItem>
                     )}
                   />
-                  <Button className="w-full h-12 mb-10 mt-5" type="submit">
-                    Sign In
+                  <Button className="w-full h-12 mb-6 mt-5" type="submit">
+                    Sign Up
                   </Button>
                 </div>
 
-                <div className="flex flex-col gap-5 ">
+                <div className="flex flex-col gap-4">
                   <Button
-                    className="w-full h-12 bg-white text-black"
+                    className="w-full h-12 bg-white text-black flex items-center justify-center gap-2"
                     type="submit"
                   >
                     <Google />
-                    <p>Sign in with Google</p>
+                    <span>Sign Up with Google</span>
                   </Button>
                   <Button
-                    className="w-full h-12  bg-white text-black"
+                    className="w-full h-12 bg-white text-black flex items-center justify-center gap-2"
                     type="submit"
                   >
                     <Apple />
-                    <p>Sign in with Apple</p>
+                    <span>Sign Up with Apple</span>
                   </Button>
                 </div>
+
                 <div className="flex justify-center">
-                  <p className="text-foreground/70 space-x-2">
-                    <span>Don’t have an Account?</span>
-                    <Link to="/auth/sign-up" className="font-medium">
-                       Sign-Up here!
+                  <p className="text-foreground/70 space-x-2 text-sm">
+                    <span>Already have an account?</span>
+                    <Link to="/sign-in" className="font-medium">
+                      Sign In here!
                     </Link>
                   </p>
                 </div>
@@ -122,10 +125,12 @@ const Signup = () => {
             </Form>
           </div>
         </div>
+
+        {/* Right Section */}
         <div
-          className="h-screen w-full flex items-center justify-start bg-cover bg-center"
+          className="w-full lg:w-1/2 h-screen flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: `url(${bg2})` }}
-        ></div>
+        />
       </div>
     </div>
   );

@@ -11,9 +11,10 @@ const PriceFaq = () => {
       <div>
         <div className="container mx-auto pb-20">
           <div>
-            <h1 className="text-[#000] text-center font-inter text-[48px] font-medium leading-[120%] py-5">
+            <h1 className="text-[#000] text-center font-inter text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-[120%] py-5">
               Frequently Asked Questions
             </h1>
+
             <div>
               <Accordion type="single" collapsible className="w-full mt-14">
                 <AccordionItem

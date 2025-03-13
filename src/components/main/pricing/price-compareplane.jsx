@@ -1,4 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,72 +7,70 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Righticon from "@/assets/righticon"; // Ensure you have this icon
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const plans = {
   monthly: [
     {
-      title: "Free",
-      description: "per user/month",
-      price: "$0",
-      ulhead: "For Small Teams",
-      "badge-percentage": "-15%",
+      title: 'Free',
+      description: 'per user/month',
+      price: '$0',
+      ulhead: 'For Small Teams',
+      'badge-percentage': '-15%',
       badge: false,
       features: [
-        "Real-time contact syncing",
-        "Automatic data enrichment",
-        "Up to 3 seats",
+        'Real-time contact syncing',
+        'Automatic data enrichment',
+        'Up to 3 seats',
       ],
     },
     {
-      title: "Basic",
-      description: "per user/month",
-      price: "$49",
-      "badge-percentage": "15%",
-      ulhead: "For Growing Teams",
+      title: 'Basic',
+      description: 'per user/month',
+      price: '$49',
+      'badge-percentage': '15%',
+      ulhead: 'For Growing Teams',
       badge: true,
-      features: ["Private lists", "Enhanced email sending", "No seat limits"],
+      features: ['Private lists', 'Enhanced email sending', 'No seat limits'],
     },
     {
-      title: "Pro",
-      description: "per user/month",
-      ulhead: "For Scaling Businesses",
-      price: "$79",
-      "badge-percentage": "25%",
+      title: 'Pro',
+      description: 'per user/month',
+      ulhead: 'For Scaling Businesses',
+      price: '$79',
+      'badge-percentage': '25%',
       badge: true,
       features: [
-        "Advanced data enrichment",
-        "Priority support",
-        "Unlimited seats",
+        'Advanced data enrichment',
+        'Priority support',
+        'Unlimited seats',
       ],
     },
   ],
   yearly: [
     {
-      title: "Free",
-      description: "per user/year",
-      price: "$0",
-      ulhead: "For Small Teams",
-      "badge-percentage": "-15%",
+      title: 'Free',
+      description: 'per user/year',
+      price: '$0',
+      ulhead: 'For Small Teams',
+      'badge-percentage': '-15%',
       badge: false,
     },
     {
-      title: "Basic",
-      description: "per user/year",
-      price: "$39",
-      "badge-percentage": "20%",
-      ulhead: "For Growing Teams",
+      title: 'Basic',
+      description: 'per user/year',
+      price: '$39',
+      'badge-percentage': '20%',
+      ulhead: 'For Growing Teams',
       badge: true,
     },
     {
-      title: "Pro",
-      description: "per user/year",
-      ulhead: "For Scaling Businesses",
-      price: "$59",
-      "badge-percentage": "30%",
+      title: 'Pro',
+      description: 'per user/year',
+      ulhead: 'For Scaling Businesses',
+      price: '$59',
+      'badge-percentage': '30%',
       badge: true,
     },
   ],
@@ -79,18 +78,15 @@ const plans = {
 
 const Compareplane = () => {
   return (
-    <div className="py-20 container mx-auto">
-      <h1 className="text-black text-center font-inter text-[48px] font-medium leading-[120%] py-10">
+    <div className="py-10 md:py-20 container mx-auto px-4">
+      <h1 className="text-black text-center font-inter text-3xl md:text-[48px] font-medium leading-[120%] py-5 md:py-10">
         Compare Plans
       </h1>
 
       <Tabs defaultValue="monthly">
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
           <div>
-            <h1
-              className="text-black font-montserrat text-[18px] font-normal leading-[150%] pb-3
-"
-            >
+            <h1 className="text-black font-montserrat text-lg md:text-[18px] font-normal leading-[150%] pb-3">
               Billing Frequency
             </h1>
             <div className="flex justify-center mb-8">
@@ -100,8 +96,7 @@ const Compareplane = () => {
               </TabsList>
             </div>
           </div>
-          <div className="flex-1">
-            {" "}
+          <div className="flex-1 w-full">
             <TabsContent value="monthly">
               <div className="flex flex-col md:flex-row justify-center gap-8">
                 {plans.monthly.map((plan, index) => (
@@ -128,7 +123,7 @@ const PlanCard = ({ plan }) => {
   return (
     <Card className="w-full md:w-1/3 flex flex-col h-full shadow-md border border-gray-200 text-start">
       <CardHeader>
-        <CardTitle className="text-black font-montserrat text-[24px] font-semibold leading-normal">
+        <CardTitle className="text-black font-montserrat text-2xl md:text-[24px] font-semibold leading-normal">
           {plan.title}
         </CardTitle>
         <CardDescription className="text-gray-600 text-base font-normal leading-[30px]">
@@ -136,17 +131,17 @@ const PlanCard = ({ plan }) => {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-black text-[48px] font-semibold leading-normal inline">
+        <p className="text-black text-4xl md:text-[48px] font-semibold leading-normal inline">
           {plan.price}
         </p>
         {plan.badge && (
           <Badge className="ml-3 bg-red-500 text-white">
-            {plan["badge-percentage"]}
+            {plan['badge-percentage']}
           </Badge>
         )}
       </CardContent>
       <CardContent className="flex-grow">
-        <h1 className="mb-2 text-[#000] font-montserrat text-[14px] font-medium leading-[150%]">
+        <h1 className="mb-2 text-[#000] font-montserrat text-sm md:text-[14px] font-medium leading-[150%]">
           {plan.ulhead}
         </h1>
       </CardContent>
