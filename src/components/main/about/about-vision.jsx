@@ -13,7 +13,11 @@ const AboutVision = () => {
               <img src={aboutimg1} alt="" className="w-full sm:w-auto" />
             </div>
             <div className="w-full sm:w-auto">
-              <img src={aboutimg2} alt="" className="w-full sm:w-auto  max-h-[340px] sm:h-auto" />
+              <img
+                src={aboutimg2}
+                alt=""
+                className="w-full sm:w-auto  max-h-[340px] sm:h-auto"
+              />
             </div>
             <div>
               <h1 className="text-[#111] text-right font-montserrat lg:text-[72px] 2xl:text-[88px] not-italic font-normal leading-normal tracking-[-0.88px] absolute -top-[10rem] left-[450px]  hidden xl:block">
@@ -52,17 +56,17 @@ const AboutVision = () => {
             </div>
 
             {/* Principles Grid */}
-            <div className="py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            <div className="py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto ">
               {["Simplicity", "Accuracy", "Transparency", "Reliability"].map(
                 (principle, index) => (
                   <div key={index} className="flex items-start">
                     <div>
-                      <p className="text-[#FF5241] font-questrial text-[24px] sm:text-[32px] not-italic font-normal leading-normal tracking-[-0.32px]">
+                      <p className="text-[#FF5241] font-questrial text-[14px] sm:text-[28px] not-italic font-normal leading-normal tracking-[-0.32px]">
                         0{index + 1}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#111] font-montserrat text-[32px] sm:text-[40px] lg:text-[48px] not-italic font-normal leading-normal">
+                      <p className="text-[#111] font-montserrat text-[25px] sm:text-[40px] lg:text-[38px] not-italic font-normal leading-normal">
                         {principle}
                       </p>
                     </div>

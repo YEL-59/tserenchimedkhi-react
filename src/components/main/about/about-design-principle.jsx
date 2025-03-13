@@ -1,5 +1,5 @@
 import { Input } from "@/components/ui/input";
-
+import { ArrowRight } from "lucide-react";
 const DesignPrinciple = () => {
   const principles = [
     {
@@ -27,7 +27,7 @@ const DesignPrinciple = () => {
   return (
     <>
       <div className="container mx-auto bg-[#fff] shadow-sm">
-        <div className="flex flex-col sm:flex-row justify-center gap-10 sm:gap-20 items-start p-10">
+        <div className="flex flex-col lg:flex-row justify-center gap-10 sm:gap-10 items-start p-10">
           <div className="text-center sm:text-left">
             <h3 className="text-[#FF5241] font-montserrat text-[16px] sm:text-[28px] font-normal leading-normal tracking-[-0.24px]">
               Our Design Principles
@@ -80,10 +80,18 @@ const DesignPrinciple = () => {
           <h1 className="text-[#FF5241] font-questrial text-[24px] sm:text-[28px] font-normal leading-normal tracking-[-0.24px]">
             Subscribe to our newsletter
           </h1>
-          <p className="text-black font-questrial text-[32px] sm:text-[40px] lg:text-[60px] font-normal leading-[72px] tracking-[-0.6px]">
+          <p className="text-black font-questrial text-[32px] sm:text-[40px] lg:text-[60px] font-normal md:leading-[72px] tracking-[-0.6px]">
             Get Expert Migration Tips, Updates, and Promotions Delivered
             Directly to Your Inbox—No Spam, Just Helpful Insights!
           </p>
+
+          <div className="relative mt-5">
+            <Input
+              className="w-full  rounded-lg px-5   border border-b transition duration-300 pr-12 py-5 bg-transparent"
+              placeholder="Type your email here"
+            />
+            <ArrowRight className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-500" />
+          </div>
         </div>
       </div>
     </>
