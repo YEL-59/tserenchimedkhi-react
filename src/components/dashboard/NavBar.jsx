@@ -1,14 +1,13 @@
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BellRing } from "lucide-react";
+} from '@/components/ui/select';
+import { BellRing } from 'lucide-react';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className="container mx-auto">
       <div className="flex justify-between items-center py-4">
@@ -52,9 +51,10 @@ const NavBar = () => {
             </Select>
           </div>
         </div>
+        <div></div>
       </div>
     </div>
   );
 };
 
-export default NavBar;
+export default Navbar;

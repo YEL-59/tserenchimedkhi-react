@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import Folder1 from '@/assets/folder1';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { Progress } from "@/components/ui/progress";
-import { X, Pause, UploadCloud, CirclePause, CircleX } from "lucide-react";
-import Folder1 from "@/assets/folder1";
+} from '@/components/ui/dialog';
+import { Progress } from '@/components/ui/progress';
+import { CirclePause, CircleX, X } from 'lucide-react';
+import { useState } from 'react';
 
 export default function AttachmentModal({ open, onClose }) {
   const [uploadProgress, setUploadProgress] = useState(65);
-  const [timeRemaining, setTimeRemaining] = useState("30 seconds remaining");
+  const [timeRemaining, setTimeRemaining] = useState('30 seconds remaining');
 
   return (
     <Dialog open={open} onOpenChange={onClose}>

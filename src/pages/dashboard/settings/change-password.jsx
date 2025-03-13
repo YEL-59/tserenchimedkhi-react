@@ -1,35 +1,34 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
 //import { useGetUser, useRequestOTP, useResetPassword } from "@/hooks/auth.hook";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 const changePasswordSchema = z
   .object({
-    phone: z.string().min(1, "Phone number is required"),
+    phone: z.string().min(1, 'Phone number is required'),
     otp: z
-      .string({ required_error: "OTP is required" })
-      .min(1, "OTP is required"),
+      .string({ required_error: 'OTP is required' })
+      .min(1, 'OTP is required'),
     password: z
       .string()
-      .min(1, "Password is required")
-      .min(8, "Password must be at least 8 characters long"),
+      .min(1, 'Password is required')
+      .min(8, 'Password must be at least 8 characters long'),
     password_confirmation: z
       .string()
-      .min(1, "Confirmation password is required"),
+      .min(1, 'Confirmation password is required'),
   })
   .refine((data) => data.password === data.password_confirmation, {
-    path: ["password_confirmation"],
-    message: "Passwords do not match",
+    path: ['password_confirmation'],
+    message: 'Passwords do not match',
   });
 
 export default function ChangePassword() {
@@ -49,10 +48,10 @@ export default function ChangePassword() {
     resolver: zodResolver(changePasswordSchema),
     defaultValues: {
       // phone: user?.phone,
-      phone: "",
-      otp: "",
-      password: "",
-      password_confirmation: "",
+      phone: '',
+      otp: '',
+      password: '',
+      password_confirmation: '',
     },
   });
 

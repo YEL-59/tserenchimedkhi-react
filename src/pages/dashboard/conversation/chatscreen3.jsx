@@ -1,36 +1,35 @@
-import AttachmentModal from "@/components/dashboard/AttachmentModal";
-import { Button } from "@/components/ui/button";
-import { Smile, Copy, Bookmark } from "lucide-react";
+import AttachmentModal from '@/components/dashboard/attachment-modal';
+import { Button } from '@/components/ui/button';
 import {
-  Mic,
   ArrowRight,
-  Paperclip,
-  ChevronLeft,
   CalendarDays,
-  Clock,
+  ChevronLeft,
   CircleCheck,
+  Clock,
   File,
-} from "lucide-react";
-import { useState } from "react";
-import bgimg from "../../../assets/bgimg.png";
+  Mic,
+  Paperclip,
+} from 'lucide-react';
+import { useState } from 'react';
+import bgimg from '../../../assets/bgimg.png';
 
 export default function Chatscreen3() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const documents = [
-    "Academic Transcripts",
-    "IELTS Score (Minimum 7.0)",
-    "Statement of Purpose",
-    "Letters of Recommendation (2)",
-    "Resume/CV",
-    "Passport Copy",
+    'Academic Transcripts',
+    'IELTS Score (Minimum 7.0)',
+    'Statement of Purpose',
+    'Letters of Recommendation (2)',
+    'Resume/CV',
+    'Passport Copy',
   ];
 
   const timelineSteps = [
-    { step: 1, title: "Document Submission", date: "March 1, 2024" },
-    { step: 2, title: "Application Review", date: "March 1, 2024" },
-    { step: 3, title: "Interview (if required)", date: "March 1, 2024" },
-    { step: 4, title: "Decision", date: "March 1, 2024" },
+    { step: 1, title: 'Document Submission', date: 'March 1, 2024' },
+    { step: 2, title: 'Application Review', date: 'March 1, 2024' },
+    { step: 3, title: 'Interview (if required)', date: 'March 1, 2024' },
+    { step: 4, title: 'Decision', date: 'March 1, 2024' },
   ];
 
   const DocumentList = () => (

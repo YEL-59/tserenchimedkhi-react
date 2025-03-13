@@ -1,14 +1,14 @@
-import Chat from "@/assets/chat";
-import logo from "../../../assets/Logo.png";
-import Setting from "@/assets/setting";
-import Icon1 from "@/assets/icon1";
-import Icon2 from "@/assets/Icon2";
-import Logout from "@/assets/logout";
+import Chat from '@/assets/chat';
+import Icon1 from '@/assets/icon1';
+import Icon2 from '@/assets/Icon2';
+import Logout from '@/assets/logout';
+import Setting from '@/assets/setting';
+import logo from '../../../assets/Logo.png';
 
 const DashboardSidebar = () => {
   return (
     <>
-      <div className="w-[64px] h-screen  bg-[#1E1F22] ">
+      <aside className="w-[64px] h-full bg-[#1E1F22]">
         <div className="flex flex-col gap-5 h-screen justify-between items-center py-5">
           <div>
             <div className="flex flex-col gap-20 justify-between items-center">
@@ -44,7 +44,7 @@ const DashboardSidebar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </aside>
     </>
   );
 };

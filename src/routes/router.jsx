@@ -9,7 +9,6 @@ import Chatscreen1 from "@/pages/dashboard/conversation/chatscreen1";
 import Chatscreen2 from "@/pages/dashboard/conversation/chatscreen2";
 import Chatscreen3 from "@/pages/dashboard/conversation/chatscreen3";
 import Chatscreen4 from "@/pages/dashboard/conversation/chatscreen4";
-import Chatscreen5 from "@/pages/dashboard/conversation/chatscreen5";
 import ChangePassword from "@/pages/dashboard/settings/change-password";
 import GeneralSettings from "@/pages/dashboard/settings/general-settings";
 import SettingsLayout from "@/pages/dashboard/settings/settings-layout";

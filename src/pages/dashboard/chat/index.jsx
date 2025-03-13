@@ -1,26 +1,26 @@
-import Chatlogo from "@/assets/Chatlogo";
-import Icon4 from "@/assets/Icon4";
-import { Mic, ArrowRight, Paperclip } from "lucide-react";
+import Chatlogo from '@/assets/Chatlogo';
+import Icon4 from '@/assets/Icon4';
+import { ArrowRight, Mic, Paperclip } from 'lucide-react';
 
 export default function Chat() {
   const cardData = [
     {
-      title: "Quick Queries",
-      description: "Instant answers to common migration-related questions.",
+      title: 'Quick Queries',
+      description: 'Instant answers to common migration-related questions.',
     },
     {
-      title: "Application Assistance",
-      description: "Help with forms, GTE writing, and submission tracking",
+      title: 'Application Assistance',
+      description: 'Help with forms, GTE writing, and submission tracking',
     },
     {
-      title: "Details Pathway",
+      title: 'Details Pathway',
       description:
-        "Comprehensive migration guidance, including visa assistance, job search, and legal advice.",
+        'Comprehensive migration guidance, including visa assistance, job search, and legal advice.',
     },
     {
-      title: "Migration Pathway Plans",
+      title: 'Migration Pathway Plans',
       description:
-        "Explore Tailored Migration Pathway Plans to Achieve Your Dream Destination with AI",
+        'Explore Tailored Migration Pathway Plans to Achieve Your Dream Destination with AI',
     },
   ];
 
