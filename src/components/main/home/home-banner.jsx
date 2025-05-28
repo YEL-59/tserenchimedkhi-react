@@ -1,19 +1,24 @@
-import brand1 from '@/assets/brands/logo-1.png';
-import brand2 from '@/assets/brands/logo-2.png';
-import brand3 from '@/assets/brands/logo-3.png';
-import brand4 from '@/assets/brands/logo-4.png';
-import brand5 from '@/assets/brands/logo-5.png';
-import Graph from '@/assets/graph1';
-import Graph2 from '@/assets/graph2';
-import Task from '@/assets/task';
-import Task1 from '@/assets/task1';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Link } from 'react-router';
-import line from '../../../assets/Line.png';
-import bannerbg from '../../../assets/banner.png';
-import { Button } from '../../ui/button';
+import brand1 from "@/assets/brands/logo-1.png";
+import brand2 from "@/assets/brands/logo-2.png";
+import brand3 from "@/assets/brands/logo-3.png";
+import brand4 from "@/assets/brands/logo-4.png";
+import brand5 from "@/assets/brands/logo-5.png";
+import Graph from "@/assets/graph1";
+import Graph2 from "@/assets/graph2";
+import Task from "@/assets/task";
+import Task1 from "@/assets/task1";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router";
+import line from "../../../assets/Line.png";
+import bannerbg from "../../../assets/banner.png";
+import { Button } from "../../ui/button";
+import { useGetALL } from "@/hooks/home.hook";
 
 const HomeBanner = () => {
+  const { getall } = useGetALL();
+  console.log({ getall });
+  const hero_section = getall?.hero || {};
+  console.log({ hero_section });
   return (
     <>
       <div className="container flex gap-8">
@@ -23,22 +28,24 @@ const HomeBanner = () => {
         <div className="flex-1 mt-[4%] relative">
           <div className="flex gap-[70px]">
             <div className="w-[40%] hidden xl:block">
-              <img src={bannerbg} alt="Globe" className="w-full" />
+              <img
+                src={hero_section[0]?.background_image_url}
+                alt="Globe"
+                className="w-full"
+              />
             </div>
             <div className="flex-1">
               <h1 className="text-[32px] sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium">
-                Transform Your Migration Efficiency
+                {hero_section[0]?.heading}
               </h1>
               <p className="text-[16px] font-normal max-w-xl">
-                Optimize your migration journey with EasyMigrate, the all-in-one
-                AI-powered platform designed to help students and professionals
-                seamlessly relocate to their preferred country.
+                {hero_section[0]?.subheading}
               </p>
               <div className="flex gap-5 mt-5 mb-5">
                 <Link to="/dashboard/chat">
-                  <Button>Get Started</Button>
+                  <Button>{hero_section[0]?.button1}</Button>
                 </Link>
-                <Button variant="outline">Contact Us</Button>
+                <Button variant="outline">{hero_section[0]?.button2}</Button>
               </div>
 
               <div className="relative xl:mt-[56px] 2xl:mt-[84px] left-0 xl:-left-[124px]">
@@ -51,16 +58,14 @@ const HomeBanner = () => {
                             <Task />
                           </div>
                           <h2 className="text-black  text-xl not-italic font-semibold leading-[30px]">
-                            Task Automation
+                            {hero_section[0]?.features[0]?.title}
                           </h2>
-                        </div>{' '}
+                        </div>{" "}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="max-w-sm text-black/80  text-base not-italic font-normal leading-[30px]">
-                        Our platform automates your migration journey with smart
-                        triggers and actions, making relocation seamless and
-                        stress-free.
+                        {hero_section[0]?.features[0]?.description}
                       </p>
                     </CardContent>
                   </Card>
@@ -72,16 +77,14 @@ const HomeBanner = () => {
                             <Task1 />
                           </div>
                           <h2 className="text-black  text-xl not-italic font-semibold leading-[30px]">
-                            Real-Time Collaborate
+                            {hero_section[0]?.features[1]?.title}
                           </h2>
-                        </div>{' '}
+                        </div>{" "}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="max-w-sm text-black/80  text-base not-italic font-normal leading-[30px]">
-                        Enhance your migration journey with real-time
-                        collaboration. Track progress, manage tasks, and stay
-                        organized effortlessly.
+                        {hero_section[0]?.features[1]?.description}
                       </p>
                     </CardContent>
                   </Card>
@@ -100,8 +103,10 @@ const HomeBanner = () => {
             <CardContent>
               <div className="flex justify-between items-center">
                 <div>
-                  <p>People Migrate</p>
-                  <p className="text-2xl font-bold">150k+</p>
+                  <p>{hero_section[0]?.stats[0]?.title}</p>
+                  <p className="text-2xl font-bold">
+                    {hero_section[0]?.stats[0]?.value}+
+                  </p>
                 </div>
                 <div>
                   <Graph />
@@ -111,8 +116,10 @@ const HomeBanner = () => {
             <CardContent>
               <div className="flex justify-between items-center">
                 <div>
-                  <p>Total Countries</p>
-                  <p className="text-2xl font-bold">100k+</p>
+                  <p>{hero_section[0]?.stats[1]?.title}</p>
+                  <p className="text-2xl font-bold">
+                    {hero_section[0]?.stats[1]?.value}+
+                  </p>
                 </div>
                 <div>
                   <Graph2 />
