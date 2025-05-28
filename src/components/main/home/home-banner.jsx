@@ -10,15 +10,13 @@ import Task1 from "@/assets/task1";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router";
 import line from "../../../assets/Line.png";
-import bannerbg from "../../../assets/banner.png";
 import { Button } from "../../ui/button";
 import { useGetALL } from "@/hooks/home.hook";
 
 const HomeBanner = () => {
-  const { getall } = useGetALL();
-  console.log({ getall });
-  const hero_section = getall?.hero || {};
-  console.log({ hero_section });
+  const { hero } = useGetALL();
+
+  console.log({ hero });
   return (
     <>
       <div className="container flex gap-8">
@@ -29,23 +27,23 @@ const HomeBanner = () => {
           <div className="flex gap-[70px]">
             <div className="w-[40%] hidden xl:block">
               <img
-                src={hero_section[0]?.background_image_url}
+                src={hero[0]?.background_image_url}
                 alt="Globe"
                 className="w-full"
               />
             </div>
             <div className="flex-1">
               <h1 className="text-[32px] sm:text-[36px] md:text-[40px] xl:text-[56px] 2xl:text-[71px] leading-[1.4] font-medium">
-                {hero_section[0]?.heading}
+                {hero[0]?.heading}
               </h1>
               <p className="text-[16px] font-normal max-w-xl">
-                {hero_section[0]?.subheading}
+                {hero[0]?.subheading}
               </p>
               <div className="flex gap-5 mt-5 mb-5">
                 <Link to="/dashboard/chat">
-                  <Button>{hero_section[0]?.button1}</Button>
+                  <Button>{hero[0]?.button1}</Button>
                 </Link>
-                <Button variant="outline">{hero_section[0]?.button2}</Button>
+                <Button variant="outline">{hero[0]?.button2}</Button>
               </div>
 
               <div className="relative xl:mt-[56px] 2xl:mt-[84px] left-0 xl:-left-[124px]">
@@ -58,14 +56,14 @@ const HomeBanner = () => {
                             <Task />
                           </div>
                           <h2 className="text-black  text-xl not-italic font-semibold leading-[30px]">
-                            {hero_section[0]?.features[0]?.title}
+                            {hero[0]?.features[0]?.title}
                           </h2>
                         </div>{" "}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="max-w-sm text-black/80  text-base not-italic font-normal leading-[30px]">
-                        {hero_section[0]?.features[0]?.description}
+                        {hero[0]?.features[0]?.description}
                       </p>
                     </CardContent>
                   </Card>
@@ -77,14 +75,14 @@ const HomeBanner = () => {
                             <Task1 />
                           </div>
                           <h2 className="text-black  text-xl not-italic font-semibold leading-[30px]">
-                            {hero_section[0]?.features[1]?.title}
+                            {hero[0]?.features[1]?.title}
                           </h2>
                         </div>{" "}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="max-w-sm text-black/80  text-base not-italic font-normal leading-[30px]">
-                        {hero_section[0]?.features[1]?.description}
+                        {hero[0]?.features[1]?.description}
                       </p>
                     </CardContent>
                   </Card>
@@ -103,9 +101,9 @@ const HomeBanner = () => {
             <CardContent>
               <div className="flex justify-between items-center">
                 <div>
-                  <p>{hero_section[0]?.stats[0]?.title}</p>
+                  <p>{hero[0]?.stats[0]?.title}</p>
                   <p className="text-2xl font-bold">
-                    {hero_section[0]?.stats[0]?.value}+
+                    {hero[0]?.stats[0]?.value}+
                   </p>
                 </div>
                 <div>
@@ -116,9 +114,9 @@ const HomeBanner = () => {
             <CardContent>
               <div className="flex justify-between items-center">
                 <div>
-                  <p>{hero_section[0]?.stats[1]?.title}</p>
+                  <p>{hero[0]?.stats[1]?.title}</p>
                   <p className="text-2xl font-bold">
-                    {hero_section[0]?.stats[1]?.value}+
+                    {hero[0]?.stats[1]?.value}+
                   </p>
                 </div>
                 <div>

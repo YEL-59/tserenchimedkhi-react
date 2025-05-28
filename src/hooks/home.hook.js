@@ -19,5 +19,8 @@ export const useGetALL = () => {
       }
     },
   });
-  return { getall: data?.data, isLoading };
+
+  const hero = data?.data?.hero || [];
+  const automation = data?.data?.automation || [];
+  return { getall: data?.data, isLoading, hero, automation };
 };
