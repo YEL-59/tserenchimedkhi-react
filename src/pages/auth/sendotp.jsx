@@ -16,10 +16,10 @@ import { Input } from "@/components/ui/input";
 
 import { Link } from "react-router";
 import Apple from "@/assets/apple";
-import { useSignIn } from "@/hooks/auth.hook";
+import { useSendOtp, useSignIn } from "@/hooks/auth.hook";
 
-const Signin = () => {
-  const { form, mutate, isPending } = useSignIn();
+const Sendotp = () => {
+  const { form, mutate, isPending } = useSendOtp();
 
   const onSubmit = (data) => {
     mutate(data);
@@ -60,39 +60,17 @@ const Signin = () => {
                       </FormItem>
                     )}
                   />
-                  <FormField
-                    control={form.control}
-                    name="password"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Password</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="password"
-                            placeholder="Password"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Link
-                    to="/otp-send"
-                    className="gradient-text font-[Manrope] text-[14px] font-medium"
-                  >
-                    Forgot Password
-                  </Link>
+
                   <Button
                     disable={isPending}
                     className="w-full h-12 mb-6 mt-5"
                     type="submit"
                   >
-                    {isPending ? "Signing In..." : "Sign In"}
+                    {isPending ? "Sending..." : "Send"}
                   </Button>
                 </div>
 
-                <div className="flex flex-col gap-4">
+                {/* <div className="flex flex-col gap-4">
                   <Button
                     className="w-full h-12 bg-white text-black flex items-center justify-center gap-2"
                     type="submit"
@@ -107,7 +85,7 @@ const Signin = () => {
                     <Apple />
                     <span>Sign in with Apple</span>
                   </Button>
-                </div>
+                </div> */}
 
                 <div className="flex justify-center">
                   <p className="text-foreground/70 space-x-2 text-sm">
@@ -132,4 +110,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Sendotp;
