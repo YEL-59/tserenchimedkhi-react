@@ -22,5 +22,6 @@ export const useGetALL = () => {
 
   const hero = data?.data?.hero || [];
   const automation = data?.data?.automation || [];
-  return { getall: data?.data, isLoading, hero, automation };
+  const collaboration = data?.data?.collaboration || [];
+  return { getall: data?.data, isLoading, hero, automation, collaboration };
 };
