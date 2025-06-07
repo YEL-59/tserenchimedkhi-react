@@ -5,6 +5,7 @@ import ResetPassword from "@/pages/auth/resetpassword";
 import Sendotp from "@/pages/auth/sendotp";
 import Signin from "@/pages/auth/signin";
 import Signup from "@/pages/auth/signup";
+import UpdatePassword from "@/pages/auth/updatepassword";
 import VerifyOtp from "@/pages/auth/verifyotp";
 import Chat from "@/pages/dashboard/chat/chat";
 import ChatScreen1 from "@/pages/dashboard/conversation/chatscreen1";
@@ -119,5 +120,9 @@ export const router = createBrowserRouter([
   {
     path: "new-password",
     element: <ResetPassword />,
+  },
+  {
+    path: "update-pass",
+    element: <UpdatePassword />,
   },
 ]);

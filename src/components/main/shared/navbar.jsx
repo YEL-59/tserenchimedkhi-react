@@ -87,6 +87,10 @@ const Navbar = () => {
                 <DropdownMenuItem onClick={() => navigate("/dashboard")}>
                   Dashboard
                 </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate("/update-pass")}>
+                  Profile
+                </DropdownMenuItem>
+
                 <DropdownMenuItem onClick={() => handleLogout()}>
                   Logout
                 </DropdownMenuItem>
